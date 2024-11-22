@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<head>
+    <title>Таблица Острых Блюд</title>
+</head>
+<body>
+    <header>
+        <h1>Таблица Острых Блюд</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="table.html">Таблица Блюд</a></li>
+                <li><a href="info.html">Информация</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	
+	
+    <main>
+		<details>
+    <summary>SORT</summary>
+    <form action="#" method="post">
+        <label for="sort_by_1">Первый уровень сортировки:</label>
+        <select id="sort_by_1" name="sort_by_1">
+            <option value="name">Название</option>
+            <option value="country">Страна</option>
+            <option value="calories">Калорийность</option>
+            <option value="year">Год изобретения</option>
+            <option value="fats">Жиры</option>
+            <option value="proteins">Белки</option>
+            <option value="city">Город</option>
+        </select>
+        <select id="order_1" name="order_1">
+            <option value="asc">По возрастанию</option>
+            <option value="desc">По убыванию</option>
+        </select>
+        <br>
+
+        <label for="sort_by_2">Второй уровень сортировки:</label>
+        <select id="sort_by_2" name="sort_by_2">
+            <option value="name">Название</option>
+            <option value="country">Страна</option>
+            <option value="calories">Калорийность</option>
+            <option value="year">Год изобретения</option>
+            <option value="fats">Жиры</option>
+            <option value="proteins">Белки</option>
+            <option value="city">Город</option>
+        </select>
+        <select id="order_2" name="order_2">
+            <option value="asc">По возрастанию</option>
+            <option value="desc">По убыванию</option>
+        </select>
+        <br>
+
+        <label for="sort_by_3">Третий уровень сортировки:</label>
+        <select id="sort_by_3" name="sort_by_3">
+            <option value="name">Название</option>
+            <option value="country">Страна</option>
+            <option value="calories">Калорийность</option>
+            <option value="year">Год изобретения</option>
+            <option value="fats">Жиры</option>
+            <option value="proteins">Белки</option>
+            <option value="city">Город</option>
+        </select>
+        <select id="order_3" name="order_3">
+            <option value="asc">По возрастанию</option>
+            <option value="desc">По убыванию</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Сортировать">
+    </form>
+</details>
+	
+
+        <details>
+            <summary>FILT</summary>
+            <form action="#" method="post">
+                <label for="filter_country">страна:</label>
+                <input type="text" id="filter_country" name="filter_country">
+				<br>
+                <label for="filter_city">город:</label>
+                <input type="text" id="filter_city" name="filter_city">
+                <br>
+                <label for="filter_proteins_first">белки от:</label>
+                <input type="text" id="filter_proteins_first" name="filter_proteins_first">
+				<label for="filter_proteins_second">до:</label>
+                <input type="text" id="filter_proteins_second " name="filter_proteins_second">
+                <br>
+                <label for="filter_fats_first">жиры от:</label>
+                <input type="text" id="filter_fats_first" name="filter_fats_first">
+                <label for="filter_fats_second">до</label>
+                <input type="text" id="filter_fats_second" name="filter_fats_second">
+                <br>
+                <label for="filter_year_first">год от:</label>
+                <input type="text" id="filter_year_first" name="filter_year_first">
+                <label for="filter_year_second">до</label>
+                <input type="text" id="filter_year_second" name="filter_year_second">
+                <br>
+                <label for="filter_caloric_first">каллорийность от:</label>
+                <input type="text" id="filter_caloric_first" name="filter_caloric_first">
+                <label for="filter_caloric_second">до</label>
+                <input type="text" id="filter_caloric_second" name="filter_caloric_second">
+                <br>
+                <input type="submit" value="Применить фильтр">
+            </form>
+        </details>
+
+        <details> 
+  <summary> График </summary> 
+   <form> 
+   <fieldset> 
+    <legend>Значение по оси OX</legend> 
+    <input type="radio" value="1">Год изобретения<br> 
+ <input type="radio" value="2">Страна<br> 
+
+   </fieldset> 
+    
+   <fieldset> 
+    <legend>Результат</legend> 
+    <input type="checkbox" value="1">ср. белки<br> 
+ <input type="checkbox" value="2">ср. жиры<br> 
+   </fieldset> 
+   <p><input type="button" value="Построить"></p> 
+   </form> 
+    </details>	
+       <table border="1" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Название блюда</th>
+            <th>Страна происхождения</th>
+            <th>Калорийность<br>(калории)</th>
+            <th>Год изобретения</th>
+            <th>Белки (г)</th>
+            <th>Жиры (г)</th>
+            <th>Город создания блюда</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Хабанеро Сальса</td>
+            <td>Мексика</td>
+            <td>50</td>
+            <td>2000</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Гвадалахара</td>
+        </tr>
+        <tr>
+            <td>Ткемали</td>
+            <td>Грузия</td>
+            <td>70</td>
+            <td>1000</td>
+            <td>2</td>
+            <td>0.5</td>
+            <td>Тбилиси</td>
+        </tr>
+        <tr>
+            <td>Кимчи</td>
+            <td>Корея</td>
+            <td>30</td>
+            <td>1500</td>
+            <td>1</td>
+            <td>0.2</td>
+            <td>Сеул</td>
+        </tr>
+        <tr>
+            <td>Срирачча</td>
+            <td>Таиланд</td>
+            <td>20</td>
+            <td>1980</td>
+            <td>0.5</td>
+            <td>0.1</td>
+            <td>Сиам</td>
+        </tr>
+        <tr>
+            <td>Пад Тай</td>
+            <td>Таиланд</td>
+            <td>400</td>
+            <td>1950</td>
+            <td>15</td>
+            <td>12</td>
+            <td>Бангкок</td>
+        </tr>
+        <tr>
+            <td>Тайский суп Том Ям</td>
+            <td>Таиланд</td>
+            <td>200</td>
+            <td>1960</td>
+            <td>10</td>
+            <td>5</td>
+            <td>Чианг Май</td>
+        </tr>
+        <tr>
+            <td>Биринги</td>
+            <td>Индия</td>
+            <td>300</td>
+            <td>1500</td>
+            <td>12</td>
+            <td>20</td>
+            <td>Дели</td>
+        </tr>
+        <tr>
+            <td>Ризотто с чили</td>
+            <td>Италия</td>
+            <td>350</td>
+            <td>1800</td>
+            <td>8</td>
+            <td>10</td>
+            <td>Рим</td>
+        </tr>
+        <tr>
+            <td>Курица Тика Масаала</td>
+            <td>Индия</td>
+            <td>250</td>
+            <td>1970</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Мумбаи</td>
+        </tr>
+        <tr>
+            <td>Салса Верде</td>
+            <td>Мексика</td>
+            <td>30</td>
+            <td>1990</td>
+            <td>1</td>
+            <td>0</td>
+            <td>Мехико</td>
+        </tr>
+        <tr>
+            <td>Пикалилли</td>
+            <td>Англия</td>
+            <td>60</td>
+            <td>1800</td>
+            <td>2</td>
+            <td>1</td>
+            <td>Лондон</td>
+        </tr>
+        <tr>
+            <td>Мисо суп с чили</td>
+            <td>Япония</td>
+            <td>80</td>
+            <td>1600</td>
+            <td>4</td>
+            <td>2</td>
+            <td>Токио</td>
+        </tr>
+        <tr>
+            <td>Гайо Дас</td>
+            <td>Индия</td>
+            <td>150</td>
+            <td>1900</td>
+            <td>6</td>
+            <td>8</td>
+            <td>Дели</td>
+        </tr>
+        <tr>
+            <td>Греческий соус Тзадзики</td>
+            <td>Греция</td>
+            <td>50</td>
+            <td>400</td>
+            <td>1</td>
+            <td>2</td>
+            <td>Афины</td>
+        </tr>
+        <tr>
+            <td>Чили кон карне</td>
+            <td>США</td>
+            <td>300</td>
+            <td>1900</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Техас</td>
+        </tr>
+        <tr>
+            <td>Тайский салат с папайей</td>
+            <td>Таиланд</td>
+            <td>100</td>
+            <td>2000</td>
+            <td>3</td>
+            <td>5</td>
+            <td>Бангкок</td>
+        </tr>
+        <tr>
+            <td>Курица с чили</td>
+            <td>Китай</td>
+            <td>400</td>
+            <td>1800</td>
+            <td>35</td>
+            <td>15</td>
+            <td>Шанхай</td>
+        </tr>
+        <tr>
+            <td>Куриный сатай</td>
+            <td>Индонезия</td>
+            <td>250</td>
+            <td>1900</td>
+            <td>20</td>
+            <td>10</td>
+            <td>Джакарта</td>
+        </tr>
+        <tr>
+            <td>Спагетти Агрария</td>
+            <td>Италия</td>
+            <td>400</td>
+            <td>2000</td>
+            <td>15</td>
+            <td>10</td>
+            <td>Рим</td>
+        </tr>
+        <tr>
+            <td>Сальса Пико де Гайо</td>
+            <td>Мексика</td>
+            <td>40</td>
+            <td>1980</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>Гвадалахара</td>
+        </tr>
+        <tr>
+            <td>Острые крылышки</td>
+            <td>США</td>
+            <td>350</td>
+            <td>1980</td>
+            <td>25</td>
+            <td>18</td>
+            <td>Нью-Йорк</td>
+        </tr>
+        <tr>
+            <td>Острые такос</td>
+            <td>Мексика</td>
+            <td>300</td>
+            <td>1970</td>
+            <td>15</td>
+            <td>10</td>
+            <td>Мехико</td>
+        </tr>
+        <tr>
+            <td>Острый арахисовый соус</td>
+            <td>Индонезия</td>
+            <td>200</td>
+            <td>1950</td>
+            <td>8</td>
+            <td>14</td>
+            <td>Бали</td>
+        </tr>
+        <tr>
+            <td>Том Кха Гай</td>
+            <td>Таиланд</td>
+            <td>250</td>
+            <td>1980</td>
+            <td>20</td>
+            <td>10</td>
+            <td>Бангкок</td>
+        </tr>
+        <tr>
+            <td>Крем-суп с перцем чили</td>
+            <td>Мексика</td>
+            <td>150</td>
+            <td>2005</td>
+            <td>5</td>
+            <td>8</td>
+            <td>Гвадалахара</td>
+        </tr>
+        <tr>
+            <td>Тушеная говядина с чили</td>
+            <td>Мексика</td>
+            <td>400</td>
+            <td>1900</td>
+            <td>30</td>
+            <td>18</td>
+            <td>Мехико</td>
+        </tr>
+        <tr>
+            <td>Джалапеньо попперс</td>
+            <td>США</td>
+            <td>300</td>
+            <td>1980</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Техас</td>
+        </tr>
+        <tr>
+            <td>Острые рулетики с курицей</td>
+            <td>Индия</td>
+            <td>400</td>
+            <td>1990</td>
+            <td>25</td>
+            <td>20</td>
+            <td>Дели</td>
+        </tr>
+        <tr>
+            <td>Калипсо</td>
+            <td>Япония</td>
+            <td>350</td>
+            <td>2000</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Токио</td>
+        </tr>
+        <tr>
+            <td>Куриные котлеты с чили</td>
+            <td>Италия</td>
+            <td>300</td>
+            <td>1985</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Рим</td>
+        </tr>
+        <tr>
+            <td>Суп с острым перцем</td>
+            <td>Италия</td>
+            <td>200</td>
+            <td>1975</td>
+            <td>10</td>
+            <td>5</td>
+            <td>Флоренция</td>
+        </tr>
+        <tr>
+            <td>Рагу с чили</td>
+            <td>Испания</td>
+            <td>400</td>
+            <td>1800</td>
+            <td>25</td>
+            <td>12</td>
+            <td>Мадрид</td>
+        </tr>
+        <tr>
+            <td>Острые фалафели</td>
+            <td>Ближний Восток</td>
+            <td>250</td>
+            <td>1000</td>
+            <td>15</td>
+            <td>10</td>
+            <td>Бейрут</td>
+        </tr>
+        <tr>
+            <td>Салат с острым соусом</td>
+            <td>Мексика</td>
+            <td>100</td>
+            <td>2000</td>
+            <td>3</td>
+            <td>2</td>
+            <td>Мехико</td>
+        </tr>
+        <tr>
+            <td>Острые пельмени</td>
+            <td>Китай</td>
+            <td>300</td>
+            <td>1800</td>
+            <td>20</td>
+            <td>12</td>
+            <td>Пекин</td>
+        </tr>
+        <tr>
+            <td>Курица с халапеньо</td>
+            <td>Мексика</td>
+            <td>250</td>
+            <td>1980</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Гвадалахара</td>
+        </tr>
+        <tr>
+            <td>Рис с острым соусом</td>
+            <td>Индия</td>
+            <td>200</td>
+            <td>1900</td>
+            <td>15</td>
+            <td>5</td>
+            <td>Дели</td>
+        </tr>
+        <tr>
+            <td>Пирожки с острым мясом</td>
+            <td>Россия</td>
+            <td>400</td>
+            <td>1900</td>
+            <td>25</td>
+            <td>18</td>
+            <td>Москва</td>
+        </tr>
+        <tr>
+            <td>Пастуший пирог с чили</td>
+            <td>Ирландия</td>
+            <td>500</td>
+            <td>1800</td>
+            <td>30</td>
+            <td>20</td>
+            <td>Дублин</td>
+        </tr>
+        <tr>
+            <td>Тортилья с чили</td>
+            <td>Испания</td>
+            <td>350</td>
+            <td>1700</td>
+            <td>15</td>
+            <td>10</td>
+            <td>Барселона</td>
+        </tr>
+        <tr>
+            <td>Паста с острым соусом</td>
+            <td>Италия</td>
+            <td>400</td>
+            <td>1800</td>
+            <td>20</td>
+            <td>12</td>
+            <td>Рим</td>
+        </tr>
+        <tr>
+            <td>Лазанья с чили</td>
+            <td>Италия</td>
+            <td>500</td>
+            <td>1800</td>
+            <td>30</td>
+            <td>15</td>
+            <td>Флоренция</td>
+        </tr>
+        <tr>
+            <td>Сальса с манго</td>
+            <td>Мексика</td>
+            <td>60</td>
+            <td>1995</td>
+            <td>1</td>
+            <td>0.5</td>
+            <td>Гвадалахара</td>
+        </tr>
+        <tr>
+            <td>Суп с острым шпинатом</td>
+            <td>Италия</td>
+            <td>150</td>
+            <td>2000</td>
+            <td>8</td>
+            <td>5</td>
+            <td>Рим</td>
+        </tr>
+        <tr>
+            <td>Тамале с чили</td>
+            <td>Мексика</td>
+            <td>400</td>
+            <td>1900</td>
+            <td>20</td>
+            <td>12</td>
+            <td>Мехико</td>
+        </tr>
+        <tr>
+            <td>Куфта с острым соусом</td>
+            <td>Ближний Восток</td>
+            <td>250</td>
+            <td>1000</td>
+            <td>15</td>
+            <td>10</td>
+            <td>Бейрут</td>
+        </tr>
+        <tr>
+            <td>Пирожки с острым картофелем</td>
+            <td>Индия</td>
+            <td>350</td>
+            <td>2000</td>
+            <td>8</td>
+            <td>15</td>
+            <td>Дели</td>
+        </tr>
+        <tr>
+            <td>Запеченная рыба с чили</td>
+            <td>Испания</td>
+            <td>300</td>
+            <td>1800</td>
+            <td>20</td>
+            <td>15</td>
+            <td>Барселона</td>
+        </tr>
+        <tr>
+            <td>Гриль с острыми овощами</td>
+            <td>Греческая кухня</td>
+            <td>200</td>
+            <td>2005</td>
+            <td>7</td>
+            <td>4</td>
+            <td>Афины</td>
+        </tr>
+    </tbody>
+</table>
+
+		
+		
+		 
+		
+    </main>
+
+</body>
+</html>
